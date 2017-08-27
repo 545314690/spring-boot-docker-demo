@@ -1,6 +1,8 @@
 FROM frolvlad/alpine-oraclejdk8:slim
 FROM maven:3.5.0-jdk-8
 VOLUME /tmp
+ADD ./ /app
+RUN cd /app
 #ADD mvn mvn
 #RUN chmod +x mvnw
 RUN mvn package
